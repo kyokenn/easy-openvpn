@@ -26,6 +26,7 @@ It will generate the following files:
 * ca_key.pem - keep this file on a certificate management machine for generating new client's certificates
 * **host**_cert.pem - copy it to server "host"
 * **host**_key.pem - copy it to server "host"
+* **host**.conf - copy it to server "host"
 * **user**.ovpn - copy it to client "user"
 
 For the next run you can keep your certificate chain files and generate certificate for the new client using:
@@ -45,5 +46,7 @@ It will generate the following files:
 * ca_key.pem - keep this file on a certificate management machine for generating new client's certificates
 * **host**_cert.pem - copy it to server "host"
 * **host**_key.pem - copy it to server "host"
+* **host**.conf - copy it to server "host"
 * **user**_cert.pem - copy it to client "user"
 * **user**_key.pem - copy it to client "user"
+* **user**.conf - copy it to client "user"
