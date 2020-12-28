@@ -22,7 +22,7 @@ Generate full certificate chain for the first client and server:
 ```
 It will generate the following files:
 * dh.pem - copy it to server
-* ca_cert.pem - copy it to client and server
+* ca_cert.pem - copy it to server
 * ca_key.pem - keep this file on a certificate management machine for generating new client's certificates
 * **host**_cert.pem - copy it to server "host"
 * **host**_key.pem - copy it to server "host"
