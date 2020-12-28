@@ -50,3 +50,23 @@ It will generate the following files:
 * **user**_cert.pem - copy it to client "user"
 * **user**_key.pem - copy it to client "user"
 * **user**.conf - copy it to client "user"
+
+OpenVPN server setup
+--------------------
+
+Copy all required files to /etc/openvpn/
+
+Start OpenVPN server instance:
+```
+sudo systemctl start openvpn@**host**
+```
+
+Enable OpenVPN server instance auto-start:
+```
+sudo systemctl enable openvpn@**host**
+```
+
+OpenVPN client setup
+--------------------
+
+Import **user**.ovpn config into your OpenVPN client
