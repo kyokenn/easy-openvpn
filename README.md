@@ -18,21 +18,32 @@ Usage
 
 Generate full certificate chain for the first client and server:
 ```
-./easy-openvpn.py client1_name
+./easy-openvpn.py user@host
 ```
 It will generate the following files:
 * dh.pem - copy it to server
 * ca_cert.pem - copy it to client and server
 * ca_key.pem - keep this file on a certificate management machine for generating new client's certificates
-* server_cert.pem - copy it to server
-* server_key.pem - copy it to server
-* client1_name_cert.pem - copy it to client1
-* client1_name_key.pem - copy it to client1
+* **host**_cert.pem - copy it to server "host"
+* **host**_key.pem - copy it to server "host"
+* **user**.ovpn - copy it to client "user"
 
 For the next run you can keep your certificate chain files and generate certificate for the new client using:
 ```
-./easy-openvpn.py client2_name
+./easy-openvpn.py user2@host
 ```
 It will generate the following files:
-* client2_name_cert.pem - copy it to client2
-* client2_name_key.pem - copy it to client2
+* **user2**.ovpn - copy it to client "user2"
+
+Generate full certificate chain for the first client and server *without embedding client certificates and keys*:
+```
+./easy-openvpn.py user@host --no-embed
+```
+It will generate the following files:
+* dh.pem - copy it to server
+* ca_cert.pem - copy it to client and server
+* ca_key.pem - keep this file on a certificate management machine for generating new client's certificates
+* **host**_cert.pem - copy it to server "host"
+* **host**_key.pem - copy it to server "host"
+* **user**_cert.pem - copy it to client "user"
+* **user**_key.pem - copy it to client "user"
