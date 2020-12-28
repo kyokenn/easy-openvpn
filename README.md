@@ -58,12 +58,12 @@ Copy all required files to /etc/openvpn/
 
 Start OpenVPN server instance:
 ```
-sudo systemctl start openvpn@**host**
+sudo systemctl start openvpn@host
 ```
 
 Enable OpenVPN server instance auto-start:
 ```
-sudo systemctl enable openvpn@**host**
+sudo systemctl enable openvpn@host
 ```
 
 OpenVPN client setup
